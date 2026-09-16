@@ -1,36 +1,30 @@
-# Dokumentasi Tugas 2 - Pemrograman Web
+# Tugas 2 - Pengembangan Aplikasi Web
 
-Halo! Ini adalah dokumentasi untuk Tugas 2 Pemrograman Web. Untuk tugas ini, saya membuat replika sederhana dari website Kebun Raya ITERA.
+## 1. Alasan Penggunaan Struktur Semantik
+Penerapan elemen semantik pada website Kebun Raya ITERA ini bertujuan agar setiap bagian kode memiliki fungsi yang jelas dan terstruktur sesuai dengan jenis kontennya. Berikut adalah rincian penggunaannya:
 
-## 1. Kenapa Pakai Struktur Semantik?
-Biar kodenya rapi dan lebih gampang dibaca (baik oleh developer lain maupun oleh mesin pencari kayak Google), saya menggunakan tag-tag semantik HTML5 di `index.html` dan `berita.html`. Ini rincian fungsinya:
+*   `<header>`: Digunakan untuk membungkus identitas utama website, seperti judul situs dan logo institusi.
+*   `<nav>`: Berfungsi khusus sebagai wadah navigasi menu untuk memudahkan perpindahan antarhalaman.
+*   `<main>`: Menjadi penampung utama dari seluruh isi konten inti website.
+*   `<section>`: Digunakan di dalam `<main>` untuk mengelompokkan konten berdasarkan tema atau topik besar, seperti profil Kebun Raya ITERA dan daftar harga paket.
+*   `<article>`: Digunakan secara spesifik untuk membungkus setiap item berita, karena berita merupakan entitas konten yang utuh dan dapat berdiri sendiri.
+*   `<aside>`: Digunakan untuk meletakkan informasi tambahan (seperti pengumuman penting) yang relevan tetapi di luar alur konten utama.
+*   `<footer>`: Menandai bagian penutup website yang berisi informasi kontak institusi dan tautan pendukung.
 
-*   `<header>`: Saya pakai buat bungkus logo, judul web (Kebun Raya ITERA), dan menu navigasi utama.
-*   `<nav>`: Khusus buat tempat link menu biar terkelompok dengan jelas (misalnya link ke Beranda dan Berita).
-*   `<main>`: Ini wadah utama semua isi konten halamannya. 
-*   `<section>`: Buat misahin bagian-bagian besar. Contohnya, ada *section* khusus buat "Tentang Kebun Raya ITERA", *section* daftar penghargaan, dan *section* daftar harga paket.
-*   `<article>`: Tag ini pas banget buat ngebungkus konten yang bisa berdiri sendiri. Saya pakainya untuk masing-masing item berita/penghargaan, dan artikel berita lengkap di halaman `berita.html`.
-*   `<aside>`: Ini buat info tambahan atau semacam pengumuman di pinggir halaman. Saya isi dengan info pendaftaran maba dan pemberitahuan gangguan layanan.
-*   `<footer>`: Bagian paling bawah website, isinya info kontak UPA Konservasi Flora Sumatera dan link kategori.
+## 2. Tantangan dan Solusi
+Selama proses pengerjaan, terdapat beberapa kendala teknis yang dihadapi beserta solusinya:
 
-## 2. Tantangan dan Solusinya
-Waktu ngerjain tugas ini lumayan ada beberapa *trial and error*:
-
-*   **Tantangan:** Awalnya sempat bingung bedain kapan harus pakai `<section>` dan kapan pakai `<article>`. Terus, bingung juga gimana cara bikin *list* (poin-poin) di dalam sebuah tabel.
-*   **Solusi:** Setelah nyari referensi dan eksperimen, akhirnya paham kalau `<article>` itu buat konten spesifik yang mandiri (kayak satu berita), kalau `<section>` itu buat tema yang lebih luas. Buat *list* di dalam tabel, solusinya ternyata gampang: tinggal masukin tag `<ul>` dan `<li>` langsung ke dalam tag `<td>`.
+*   **Menentukan Elemen Semantik yang Tepat:** Sempat terjadi kebingungan dalam membedakan fungsi utama antara `<main>`, `<section>`, dan `<article>`. Kendala ini diatasi dengan menyesuaikan konteks kontennya—mengkhususkan `<section>` untuk membagi bab bahasan topik besar, dan menggunakan `<article>` khusus untuk item berita karena sifatnya yang independen.
+*   **Error Validasi pada File Gambar:** Saat melakukan pengecekan di W3C Validator, muncul *error* yang disebabkan oleh penamaan *file* gambar yang menggunakan spasi. Solusinya adalah mengubah nama *file* gambar di dalam direktori penyimpanan agar tidak menggunakan spasi, lalu memperbarui nilai atribut `src` pada tag `<img>` di dalam kode HTML.
 
 ## 3. Hasil Validasi W3C
-Kedua file HTML (`index.html` dan `berita.html`) udah dicek di W3C Validator dan alhamdulillah hasilnya lolos tanpa *error*.
+Berdasarkan hasil pengujian menggunakan W3C Validator, kedua file HTML (`index.html` dan `berita.html`) telah sepenuhnya memenuhi standar validasi web tanpa adanya *error* (setelah perbaikan pada atribut gambar dan penyesuaian tag usang diselesaikan).
 
-*(Tempat untuk screenshot validasi)*
 - **Screenshot Validasi `index.html`:**
-  `![Validasi Index](masukkan_link_gambar_di_sini)`
+  <img src="/images/validasiIndex.png">
 - **Screenshot Validasi `berita.html`:**
-  `![Validasi Berita](masukkan_link_gambar_di_sini)`
+  <img src="/images/validasiBerita.png">
 
-## 4. Link Hosting (GitHub Pages)
-Tugas ini udah di-hosting di GitHub Pages sesuai format yang diminta. Semua link (*routing*) antar halaman juga udah berfungsi normal.
 
-*   **URL:** [https://[username-github-kamu].github.io/pemweb/tugas2](https://[username-github-kamu].github.io/pemweb/tugas2)
-
-*(Jangan lupa ubah `[username-github-kamu]` sama username asli kamu ya!)*# pemweb-tugas2
+## 4. Link GitHub Pages
+*   **URL:** [https://gedevalendra.github.io/pemweb/tugas2](https://gedevalendra.github.io/pemweb/tugas2)
